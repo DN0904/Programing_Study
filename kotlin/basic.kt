@@ -44,4 +44,13 @@ fun main(){    //コンソールへの出力
         println(item)
     }
 
+    //標準入力をspace区切りで行った場合の受け取り方
+    print("input number a b:")
+    val (a, b) = readLine()!!.split(" ").map{it.toInt()}
+    println("${a} ${b}")
+
+    //標準入力をスペース区切りで行った場合、リストに入力する
+    val num = readLine()!!.toInt()
+    var ary = listOf(num)
+    ary = readLine()!!.split(" ").map{it.toInt()}
 }
